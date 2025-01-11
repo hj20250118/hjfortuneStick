@@ -131,6 +131,10 @@
   $(function()
   {      
     //click event
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+      let vh = window.innerHeight * 0.01;
+      // Then we set the value in the --vh custom property to the root of the document
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
       $('#cardBtn').on('click', cardBtnClick)
       $('#drawBtn').on('click', btnclick)
       $('.slider-nav').on('afterChange',function(){
@@ -387,7 +391,7 @@
         </div>
         <div id="mask" class="h-100 w-100 d-none" style="position:absolute;z-index:1;background-color: #352121fc;opacity: .9;">
         </div>
-        <div style="height: 90vh;position:relative; z-index:2">
+        <div style="height: 90vh;position:relative;height: calc(var(--vh, 1vh) * 100); z-index:2">
             <div class="col h-100">
                 <div class="fan d-flex justify-content-center d-none" style="width: 80%;position:absolute; transform: translate(-50%, -50%) rotateZ(-45deg) rotateX(-35deg) rotateY(-5deg); top:50%; left:50%; opacity: 0;">
                   <img src="https://lh3.googleusercontent.com/pw/AP1GczN7QGIHMzDmuny6oudhvp1HIdenOtDnfEkdCf1jKC13PgJGhZNItc-Bc6MHmG4rijExG6fHW5QvCKaVve9vsKmrLpbnJEW0wjavkPwOkPGPpcGOVOrk0Zz7Fj_2Q6AiEmpcv-mVD9bybnJfbKOXcHt4=w919-h919-s-no-gm?authuser=0">
@@ -433,7 +437,7 @@
                 </div>
             </div>
         </div>
-        <div style="position:relative;height:10vh; z-index:2">
+        <div style="position:relative;height:10vh; height: calc(var(--vh, 1vh) * 100); z-index:2">
             <div class="justify-content-center align-items: center; d-flex">
                 <button type="button" id="drawBtn" class="btn btn-primary">開始抽籤</button>
             </div>
