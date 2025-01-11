@@ -372,6 +372,9 @@
         $('.leftArrow,.rightArrow').css('height',0.15*arrowL)
         $('.leftArrow,.rightArrow').css('width',0.15*arrowL)
         $('.leftArrow,.rightArrow').css('top', 0.45*curH-0.075*arrowL)
+        let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
       }
 
       animate();
