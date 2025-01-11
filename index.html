@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.5, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no">-->
+    <title>慧繼新春靈驗籤詩</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/introjs.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>   
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/intro.min.js"></script>
+<style>
+  .slick-slide > div {
+    transform: scale(.5);
+    transition: transform 0.3s linear;
+    margin-left:20px;
+    margin-right:20px;
+  }
+
+  .slick-center > div {
+    transform: scale(.7);
+  }
+
+  .slick-center > div img{
+    border-radius : 50px;
+    box-shadow: 0px 0px 12px 15px rgb(255, 239, 0, 0.6);
+  }
+
+  .slick-current img{
+    animation: twinkle 0.8s infinite alternate;
+  }
+
+
+  img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .card > img {
+    box-shadow: 0px 0px 12px 10px rgba(105, 104, 96, 0.6);
+    aspect-ratio: 9/16;
+  }
+
+  .item {
+    justify-content: center !important; 
+    display: flex !important;
+  }
+
+  span{
+    text-align: center;
+    align-items: center;
+    font-size: 3em;
+    -webkit-box-reflect: below -0.3em linear-gradient(transparent, #0004);
+  }
+
+
+  .background{
+    background-image: url('https://lh3.googleusercontent.com/pw/AP1GczOLiUE-SiqQEvSw-Zxtn5y-RAjhNpcqk0fmEIkSASVnmN52vkd6FdykWEB29xmErEcFzQx1f0CQt8SAxO0YFpBGhzLKHnkClsT1jy1ntrEd1v0Yz7hy59zJpWlFSFxggU8fsRuFuGvrtrZOC-x2ZHqj=w588-h1046-s-no-gm?authuser=0');
+    background-repeat: no-repeat;   
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+//data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'><path d='M310.6,233.4c12.5,12.5,12.5,32.8,0,45.3l-192,192c-12.5,12.5-32.8,12.5-45.3,0s-12.5-32.8,0-45.3L242.7,256,73.4,86.6c-12.5-12.5-12.5-32.8,0-45.3s32.8-12.5,45.3,0l192,192z' fill='white'/></svg>
+  .rightArrow{
+    position:absolute;
+    transform:translateZ(0);
+    right:0;
+    background:url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'><path d='M310.6,233.4c12.5,12.5,12.5,32.8,0,45.3l-192,192c-12.5,12.5-32.8,12.5-45.3,0s-12.5-32.8,0-45.3L242.7,256,73.4,86.6c-12.5-12.5-12.5-32.8,0-45.3s32.8-12.5,45.3,0l192,192z' fill='%23ffe4c4'/></svg>") no-repeat center center;
+    border-radius:50%;
+    z-index:1000;
+    background-size: 50%;
+    animation:arrowScaleRight 0.5s infinite alternate;
+  }
+//data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E
+  .leftArrow{
+    position:absolute;
+    transform:translateZ(0);
+    left:0;
+    background:url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'><path d='M9.4,233.4c-12.5,12.5-12.5,32.8,0,45.3l192,192c12.5,12.5,32.8,12.5,45.3,0s12.5-32.8,0-45.3L77.3,256,246.6,86.6c12.5-12.5,12.5-32.8,0-45.3s-32.8-12.5-45.3,0l-192,192z' fill='%23ffe4c4'/></svg>") no-repeat center center;
+    border-radius:50%;
+    z-index:1000;
+    background-size: 50%;
+    animation:arrowScaleLeft 0.5s infinite alternate;
+  }
+  .introjs-overlay, .introjs-helperLayer, .introjs-tooltipReferenceLayer{
+    transform:translateZ(0);
+  }
+  @keyframes twinkle {
+    0% {
+        opacity: 1;
+        scale: 1.05;
+        box-shadow: 0px 0px 12px 15px rgb(255, 239, 0, .6);
+    }
+    100% {
+        opacity: .8;
+        scale: 1;
+        box-shadow: 0px 0px 12px 15px rgb(255, 239, 0, 0);
+    } 
+  }
+
+  @keyframes arrowScaleRight {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 1.1;
+        transform:translateX(5px);
+    } 
+  }
+
+  @keyframes arrowScaleLeft {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 1.1;
+        transform:translateX(-5px);
+    } 
+  }
+</style>
+<script>
+  $(function()
+  {      
+    //click event
+      $('#cardBtn').on('click', cardBtnClick)
+      $('#drawBtn').on('click', btnclick)
+      $('.slider-nav').on('afterChange',function(){
+        //console.log($('.slider-nav').slick('slickCurrentSlide'))
+        let curSlideIdx = $('.slider-nav').slick('slickCurrentSlide')
+        if(curSlideIdx >= 7 ){
+          $('.rightArrow').addClass('d-none')
+        }else if(curSlideIdx <= 0){
+          $('.leftArrow').addClass('d-none')
+        }else{
+          $('.rightArrow').removeClass('d-none')
+          $('.leftArrow').removeClass('d-none')
+        }
+      }) 
+      $(document).on('click','.slick-current',function(){
+          console.log($(this).find('img')[0].getAttribute('src'))
+          $('.slick-center').removeClass('slick-current')
+          $('.slider-nav').slick('slickSetOption', 'swipe', false);
+          $('.rightArrow,.leftArrow').off('click')
+          anime.timeline({loop: false})
+          .add({
+              targets: '.slick-center',
+              scale: [1, 1.25],
+              easing: "linear",
+              duration: 1500,
+              complete:function(){
+                  //$('.card').removeClass('d-none')
+                  let cardSize = Object.keys(cards).length;
+                  //console.log(cardSize)
+                  let rdmNum = Math.floor(Math.random() * cardSize) +1;
+                  //console.log(rdmNum)
+                  $('#curCard').attr('src',cards[rdmNum])
+                  anime.timeline({loop: false})
+                  .add({
+                      targets: '.myslider',
+                      opacity: [1,0],
+                      easing: "linear",
+                      duration: 1000,
+                      complete:function(){
+                          $('.myslider').addClass('d-none')
+                          $('.card').removeClass('d-none')
+                          anime.timeline({loop: false})
+                          .add({
+                              targets: '.card',
+                              opacity: [0,1],
+                              easing: "linear",
+                              duration: 1000
+                          })
+                      }
+                  })
+              }
+          })
+      })
+
+
+      var cards = {
+          1:'https://lh3.googleusercontent.com/pw/AP1GczPvmuEGEvSN7PMGfd9Nki7LdiMwjyCtxXYsZXePIQbDuh71Q8SP2dciZdDa-sbEDFL4gG-Ey8rNdIV_OQvGKFFtRkieZbZIAvj_C2TBMdAFU5J-s7WJXT2iDMfDvrPpnoIeNfqSfARJBiySaBnyGsqz=w634-h1128-s-no-gm?authuser=0',
+          2:'https://lh3.googleusercontent.com/pw/AP1GczOYOXqqk6o2Xp3n5c2RIMsS95NQXY14ql977TecVLT6Fhs-u-gfeKEWsVNn3AHE4CJPTu1rZlbyJKfKd-HEiYob8Wxs3lQ4JVQUB1TArFHaJT0Xvv-1g9Br3SX8ge4Af6-sy7oeVF0dpQ9HESBv7t_Z=w457-h812-s-no-gm?authuser=0'
+      }
+
+
+      let w = window.innerWidth
+      let h = window.innerHeight
+      $('.card img').css('max-height',h-20)
+      $('.card img').css('max-width', w-20)
+
+      let arrowL = h > w ? w : h
+      $('.leftArrow,.rightArrow').css('height',0.15*arrowL)
+      $('.leftArrow,.rightArrow').css('width',0.15*arrowL)
+      $('.leftArrow,.rightArrow').css('top', 0.45*h-0.075*arrowL)
+
+      var canvas = document.getElementById('snow');
+      var ctx = canvas.getContext('2d');
+      var numOfSnowFlakes = 20;
+      var snowflakes =[];
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+
+      for(let i = 0; i < numOfSnowFlakes; i++){
+        snowflakes.push({
+          x:Math.random() * canvas.width,
+          y:Math.random() * canvas.height,
+          radius: Math.random() * 5 + 1,
+          density: Math.random() * numOfSnowFlakes
+        })
+      }
+      function drawSnowflakes(){
+        ctx.clearRect(0,0, canvas.width, canvas.height);
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+
+        for(let i = 0;i < numOfSnowFlakes; i++){
+          let snowflake = snowflakes[i];
+          ctx.moveTo(snowflake.x, snowflake.y);
+          ctx.arc(snowflake.x, snowflake.y, snowflake.radius, 0, Math.PI *2, true);
+        }
+        ctx.fill();
+        moveSnowflakes();
+      }
+
+      function moveSnowflakes(){
+        for(let i = 0; i<numOfSnowFlakes; i++){
+          let snowflake = snowflakes[i];
+          snowflake.y += Math.pow(snowflake.density, 0.5);
+          snowflake.x += 0//Math.sin(snowflake.y);
+
+          if(snowflake.y > canvas.height){
+            snowflakes[i] ={
+              x:Math.random() * canvas.width,
+              y: 0,
+              radius: snowflake.radius,
+              density: snowflake.density
+            };
+          }
+        }
+      }
+
+      function animate(){
+        window.requestAnimationFrame(animate);
+        drawSnowflakes();
+      }
+      function cardBtnClick(){
+        $('.card').addClass('d-none')
+        $('#drawBtn').removeClass('d-none')
+        $('#mask').addClass('d-none')
+      }
+      function btnclick(){
+          //console.log('click')
+          $('#mask').removeClass('d-none')
+          $('#drawBtn').addClass('d-none')
+          $('.myslider').addClass('d-none')
+          $('.card').addClass('d-none')
+          $('.fan').removeClass('d-none')
+          anime({
+              targets: '.card',
+              opacity: 0,
+          })
+          anime({
+              targets: '.myslider',
+              opacity:1
+          })
+          anime({
+              targets: '.fan',
+              opacity:0.99
+          })
+          if($('.slider-nav').hasClass('slick-initialized')){
+              $('.slider-nav').slick('unslick')
+          }
+
+          //揮扇子動畫
+          anime({
+              targets: '.fan',
+              rotateX:[-35, 35],
+              rotateY:[-5, 5],
+              easing: 'easeOutQuint',
+              loop: 2,
+              complete:function(){
+                  anime.timeline({loop:false})
+                  .add({
+                      targets: '.fan',
+                      opacity: [0.99,0],
+                      easing: 'linear',
+                      duration: 500,
+                  })
+                  .add({
+                      targets: '.myslider',
+                      opacity: 0,
+                      duration:1,
+                  })
+                  .add({
+                      targets: '.item',
+                      translateX:0,
+                      translateY:0,
+                      duration:1,
+                      complete:function(){
+                          $('.myslider').removeClass('d-none')
+                          $('.rightArrow').removeClass('d-none')
+                          $('.leftArrow').removeClass('d-none')
+                          $('.fan').addClass('d-none')
+                          $('.slider-nav').slick({
+                              centerMode: true,
+                              centerPadding:  '0px',
+                              slidesToShow: 3,
+                              initialSlide: 4,
+                              swipeToSlide: true,
+                              dots: false, // 預設 false 指示点
+                              arrows: true, // 預設 true 左右箭頭是否顯示
+                              nextArrow:$('.rightArrow'),
+                              prevArrow:$('.leftArrow'),
+                              focusOnSelect: false, // 預設 false
+                              infinite: false,
+                              speed:300
+                          });  
+                          /*introJs()
+                          .setOptions({
+                            steps:[{
+                              element:document.querySelector('.leftArrow'),
+                              intro:"選擇上一個卷軸",
+                              position: 'right'
+                            },{
+                              element:document.querySelector('.rightArrow'),
+                              intro:"選擇下一個卷軸",
+                              position: 'left'
+                            },{
+                              element:document.querySelector('.slick-current img'),
+                              intro:"點選中間會發光的卷軸抽出籤詩"
+                            },],
+                            showProgress:true,
+                            showBullets: false,})
+                          .start(); */
+                      }
+                      //prevArrow:$('.leftArrow')
+                      //nextArrow:$('.rightArrow')
+                  }).add({
+                      targets: '.myslider',
+                      opacity: [0,1],
+                      easing: "linear",
+                      duration: 500
+                  })             
+              }
+          })
+      }
+      
+      window.onresize = function(){
+        let curW = window.innerWidth
+        let curH = window.innerHeight
+        $('.card img').css('max-height', curH - 20)
+        $('.card img').css('max-width', curW - 20)
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let arrowL = curH > curW ? curW : curH
+        $('.leftArrow,.rightArrow').css('height',0.15*arrowL)
+        $('.leftArrow,.rightArrow').css('width',0.15*arrowL)
+        $('.leftArrow,.rightArrow').css('top', 0.45*curH-0.075*arrowL)
+      }
+
+      animate();
+
+      
+  });
+</script>
+  </head>
+  <body class="background">
+    <div class="container-flex h-100" > 
+        <canvas id="snow" style="display: block; z-index:-1; position:fixed">
+        </canvas>
+        <div class="card d-none" style="position:absolute; z-index:3; transform: translate(-50%, -50%);opacity: 0; top:50%;left:50%">
+          <div style="position:absolute; top:0; right:0;">
+            <button id="cardBtn" type="button" class="btn-close fs-2" aria-label="Close"></button>
+          </div>
+          <img id="curCard" src="">
+        </div>
+        <div id="mask" class="h-100 w-100 d-none" style="position:absolute;z-index:1;background-color: #352121fc;opacity: .9;">
+        </div>
+        <div style="height: 90vh;position:relative; z-index:2">
+            <div class="col h-100">
+                <div class="fan d-flex justify-content-center d-none" style="width: 80%;position:absolute; transform: translate(-50%, -50%) rotateZ(-45deg) rotateX(-35deg) rotateY(-5deg); top:50%; left:50%; opacity: 0;">
+                  <img src="https://lh3.googleusercontent.com/pw/AP1GczN7QGIHMzDmuny6oudhvp1HIdenOtDnfEkdCf1jKC13PgJGhZNItc-Bc6MHmG4rijExG6fHW5QvCKaVve9vsKmrLpbnJEW0wjavkPwOkPGPpcGOVOrk0Zz7Fj_2Q6AiEmpcv-mVD9bybnJfbKOXcHt4=w919-h919-s-no-gm?authuser=0">
+                </div>
+                <div class="myslider w-100 h-100 d-none">
+                    <div class="slider slider-nav align-items-center h-100 d-flex" id="myslider">
+                        <div class="item">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczMvJc5DsV6cVf9BxRPvADn1fX5L3S-g7wBZRP1_oHQsQw68PdTCvfmlSQmdCfYbO606OCmNJRhI47nWd0G3QuA6vGFlZ9aimVtjf5egEPDyqd4CzRF3thmNCJQisgrBwcLXDCvQXgYhNW65EVw606Fm=w206-h1346-s-no-gm?authuser=0">
+                        </div>
+
+                        <div class="item">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczMvJc5DsV6cVf9BxRPvADn1fX5L3S-g7wBZRP1_oHQsQw68PdTCvfmlSQmdCfYbO606OCmNJRhI47nWd0G3QuA6vGFlZ9aimVtjf5egEPDyqd4CzRF3thmNCJQisgrBwcLXDCvQXgYhNW65EVw606Fm=w206-h1346-s-no-gm?authuser=0">
+                        </div>
+
+                        <div class="item">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczMvJc5DsV6cVf9BxRPvADn1fX5L3S-g7wBZRP1_oHQsQw68PdTCvfmlSQmdCfYbO606OCmNJRhI47nWd0G3QuA6vGFlZ9aimVtjf5egEPDyqd4CzRF3thmNCJQisgrBwcLXDCvQXgYhNW65EVw606Fm=w206-h1346-s-no-gm?authuser=0">
+                        </div>
+
+                        <div class="item">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczMvJc5DsV6cVf9BxRPvADn1fX5L3S-g7wBZRP1_oHQsQw68PdTCvfmlSQmdCfYbO606OCmNJRhI47nWd0G3QuA6vGFlZ9aimVtjf5egEPDyqd4CzRF3thmNCJQisgrBwcLXDCvQXgYhNW65EVw606Fm=w206-h1346-s-no-gm?authuser=0">
+                        </div>
+                    
+                        <div class="item">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczMvJc5DsV6cVf9BxRPvADn1fX5L3S-g7wBZRP1_oHQsQw68PdTCvfmlSQmdCfYbO606OCmNJRhI47nWd0G3QuA6vGFlZ9aimVtjf5egEPDyqd4CzRF3thmNCJQisgrBwcLXDCvQXgYhNW65EVw606Fm=w206-h1346-s-no-gm?authuser=0">
+                        </div>
+
+                        <div class="item">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczMvJc5DsV6cVf9BxRPvADn1fX5L3S-g7wBZRP1_oHQsQw68PdTCvfmlSQmdCfYbO606OCmNJRhI47nWd0G3QuA6vGFlZ9aimVtjf5egEPDyqd4CzRF3thmNCJQisgrBwcLXDCvQXgYhNW65EVw606Fm=w206-h1346-s-no-gm?authuser=0">
+                        </div>
+
+                        <div class="item">
+                            <img  src="https://lh3.googleusercontent.com/pw/AP1GczMvJc5DsV6cVf9BxRPvADn1fX5L3S-g7wBZRP1_oHQsQw68PdTCvfmlSQmdCfYbO606OCmNJRhI47nWd0G3QuA6vGFlZ9aimVtjf5egEPDyqd4CzRF3thmNCJQisgrBwcLXDCvQXgYhNW65EVw606Fm=w206-h1346-s-no-gm?authuser=0">
+                        </div>
+
+                        <div class="item">
+                            <img  src="https://lh3.googleusercontent.com/pw/AP1GczMvJc5DsV6cVf9BxRPvADn1fX5L3S-g7wBZRP1_oHQsQw68PdTCvfmlSQmdCfYbO606OCmNJRhI47nWd0G3QuA6vGFlZ9aimVtjf5egEPDyqd4CzRF3thmNCJQisgrBwcLXDCvQXgYhNW65EVw606Fm=w206-h1346-s-no-gm?authuser=0">
+                        </div>
+                    </div>
+                    <div class="rightArrow" id="rightArrow">
+                    </div>
+                    <div class="leftArrow" id="leftArrow">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="position:relative;height:10vh; z-index:2">
+            <div class="justify-content-center align-items: center; d-flex">
+                <button type="button" id="drawBtn" class="btn btn-primary">開始抽籤</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
