@@ -136,7 +136,7 @@
   $(function()
   {      
     //click event
-      $('#cardBtn').on('click', cardBtnClick)
+      $('#cardBtn').on('click', cardClose)
       $('#drawBtn').on('click', btnclick)
       $('.slider-nav').on('afterChange',function(){
         //console.log($('.slider-nav').slick('slickCurrentSlide'))
@@ -258,7 +258,7 @@
         window.requestAnimationFrame(animate);
         drawSnowflakes();
       }
-      function cardBtnClick(){
+      function cardClose(){
         $('.card').addClass('d-none')
         $('#drawBtn').removeClass('d-none')
         $('#mask').addClass('d-none')
